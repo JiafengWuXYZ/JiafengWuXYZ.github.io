@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="###这是第一篇博客 12345678910111213141516171819202122232425262728293031323334353637public class NetWorkUtil &amp;#123;    private NetWorkUtil() &amp;#123;&amp;#125;    /**     * 判断网络是否可用     *     * @param context     *">
+<meta name="description" content="#####这是第一篇博客  这个可以检测网络的情况  12345678910111213141516171819202122232425262728293031323334353637public class NetWorkUtil &amp;#123;    private NetWorkUtil() &amp;#123;&amp;#125;    /**     * 判断网络是否可用     *     * @par">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Start">
 <meta property="og:url" content="http://www.baidu.com/2017/08/11/Start/index.html">
 <meta property="og:site_name" content="Blog of Jiafeng">
-<meta property="og:description" content="###这是第一篇博客 12345678910111213141516171819202122232425262728293031323334353637public class NetWorkUtil &amp;#123;    private NetWorkUtil() &amp;#123;&amp;#125;    /**     * 判断网络是否可用     *     * @param context     *">
+<meta property="og:description" content="#####这是第一篇博客  这个可以检测网络的情况  12345678910111213141516171819202122232425262728293031323334353637public class NetWorkUtil &amp;#123;    private NetWorkUtil() &amp;#123;&amp;#125;    /**     * 判断网络是否可用     *     * @par">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-11T04:22:24.000Z">
+<meta property="og:updated_time" content="2017-08-11T04:25:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Start">
-<meta name="twitter:description" content="###这是第一篇博客 12345678910111213141516171819202122232425262728293031323334353637public class NetWorkUtil &amp;#123;    private NetWorkUtil() &amp;#123;&amp;#125;    /**     * 判断网络是否可用     *     * @param context     *">
+<meta name="twitter:description" content="#####这是第一篇博客  这个可以检测网络的情况  12345678910111213141516171819202122232425262728293031323334353637public class NetWorkUtil &amp;#123;    private NetWorkUtil() &amp;#123;&amp;#125;    /**     * 判断网络是否可用     *     * @par">
 
 
 
@@ -113,7 +113,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
@@ -324,7 +324,10 @@
       
 
       
-        <p>###这是第一篇博客</p>
+        <p>#####这是第一篇博客</p>
+<blockquote>
+<p>这个可以检测网络的情况</p>
+</blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NetWorkUtil</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">NetWorkUtil</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line"><span class="comment">     * 判断网络是否可用</span></div><div class="line"><span class="comment">     *</span></div><div class="line"><span class="comment">     * <span class="doctag">@param</span> context</span></div><div class="line"><span class="comment">     * <span class="doctag">@return</span></span></div><div class="line"><span class="comment">     */</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isNetWorkAvailable</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);</div><div class="line">        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();</div><div class="line">        <span class="keyword">return</span> networkInfo != <span class="keyword">null</span> &amp;&amp; networkInfo.isConnected();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line"><span class="comment">     * 检测wifi是否连接</span></div><div class="line"><span class="comment">     *</span></div><div class="line"><span class="comment">     * <span class="doctag">@return</span></span></div><div class="line"><span class="comment">     */</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isWifiConnected</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);</div><div class="line">        NetworkInfo networkInfo = cm.getActiveNetworkInfo();</div><div class="line">        <span class="keyword">return</span> networkInfo != <span class="keyword">null</span> &amp;&amp; networkInfo.getType() == ConnectivityManager.TYPE_WIFI;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line"><span class="comment">     * 检测3G是否连接</span></div><div class="line"><span class="comment">     *</span></div><div class="line"><span class="comment">     * <span class="doctag">@return</span></span></div><div class="line"><span class="comment">     */</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">is3gConnected</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);</div><div class="line">        NetworkInfo networkInfo = cm.getActiveNetworkInfo();</div><div class="line">        <span class="keyword">return</span> networkInfo != <span class="keyword">null</span> &amp;&amp; networkInfo.getType() == ConnectivityManager.TYPE_MOBILE;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 
       
@@ -352,22 +355,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/08/11/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -432,7 +419,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -502,7 +489,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -587,6 +574,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
