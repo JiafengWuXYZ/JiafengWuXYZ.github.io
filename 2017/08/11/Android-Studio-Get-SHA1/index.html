@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="Mac： DEBUG:  输入命令 -list -v -keystore ~/.android/debug.keystore ```12345678&amp;gt;&amp;gt; 注：debug.keystore只是默认调试的签名钥 &amp;gt;&amp;gt; 默认密码：androidRELEASE:&amp;gt; ```keytool -list -v -keystore /Users/xx.jks -alias xx -s">
+<meta name="description" content="MacDEBUG: keytool -list -v -keystore ~/.android/debug.keystore   注：debug.keystore只是默认调试的签名钥  默认密码：android RELEASE:  keytool -list -v -keystore /Users/xx.jks -alias xx -storepass abcdef -keypass abcdef">
 <meta name="keywords" content="Android-Studio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android Studio 获取 SHA1">
 <meta property="og:url" content="http://www.baidu.com/2017/08/11/Android-Studio-Get-SHA1/index.html">
 <meta property="og:site_name" content="Blog of Jiafeng">
-<meta property="og:description" content="Mac： DEBUG:  输入命令 -list -v -keystore ~/.android/debug.keystore ```12345678&amp;gt;&amp;gt; 注：debug.keystore只是默认调试的签名钥 &amp;gt;&amp;gt; 默认密码：androidRELEASE:&amp;gt; ```keytool -list -v -keystore /Users/xx.jks -alias xx -s">
+<meta property="og:description" content="MacDEBUG: keytool -list -v -keystore ~/.android/debug.keystore   注：debug.keystore只是默认调试的签名钥  默认密码：android RELEASE:  keytool -list -v -keystore /Users/xx.jks -alias xx -storepass abcdef -keypass abcdef">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-11T09:25:30.000Z">
+<meta property="og:updated_time" content="2017-08-11T09:35:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Studio 获取 SHA1">
-<meta name="twitter:description" content="Mac： DEBUG:  输入命令 -list -v -keystore ~/.android/debug.keystore ```12345678&amp;gt;&amp;gt; 注：debug.keystore只是默认调试的签名钥 &amp;gt;&amp;gt; 默认密码：androidRELEASE:&amp;gt; ```keytool -list -v -keystore /Users/xx.jks -alias xx -s">
+<meta name="twitter:description" content="MacDEBUG: keytool -list -v -keystore ~/.android/debug.keystore   注：debug.keystore只是默认调试的签名钥  默认密码：android RELEASE:  keytool -list -v -keystore /Users/xx.jks -alias xx -storepass abcdef -keypass abcdef">
 
 
 
@@ -324,17 +324,19 @@
       
 
       
-        <p><strong>Mac</strong>：</p>
-<p>DEBUG:</p>
-<blockquote>
-<p>输入命令</p>
-<figure class="highlight plain"><figcaption><span>-list -v -keystore ~/.android/debug.keystore ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&gt;</div><div class="line">&gt; 注：debug.keystore只是默认调试的签名钥 </div><div class="line">&gt;</div><div class="line">&gt; 默认密码：android</div><div class="line"></div><div class="line">RELEASE:</div><div class="line"></div><div class="line">&gt; ```keytool -list -v -keystore /Users/xx.jks -alias xx -storepass abcdef -keypass abcdef</div></pre></td></tr></table></figure>
+        <h2 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h2><h4 id="DEBUG"><a href="#DEBUG" class="headerlink" title="DEBUG:"></a>DEBUG:</h4><blockquote>
+<p>keytool -list -v -keystore ~/.android/debug.keystore </p>
 </blockquote>
-<p><strong>Windows</strong>：</p>
-<p>DEBUG:</p>
-<blockquote>
-<p>输入命令</p>
-<figure class="highlight plain"><figcaption><span>-v -list -keystore  C:\Users\DELL\.android\debug.keystore```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">RELEASE:</div><div class="line"></div><div class="line">&gt; ```keytool -v -list -keystore keystore.jks</div></pre></td></tr></table></figure>
+<p>注：debug.keystore只是默认调试的签名钥 </p>
+<p>默认密码：android</p>
+<h4 id="RELEASE"><a href="#RELEASE" class="headerlink" title="RELEASE:"></a>RELEASE:</h4><blockquote>
+<p> keytool -list -v -keystore /Users/xx.jks -alias xx -storepass abcdef -keypass abcdef</p>
+</blockquote>
+<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h4 id="DEBUG-1"><a href="#DEBUG-1" class="headerlink" title="DEBUG:"></a>DEBUG:</h4><blockquote>
+<p> keytool -v -list -keystore  C:\Users\DELL.android\debug.keystore</p>
+</blockquote>
+<h4 id="RELEASE-1"><a href="#RELEASE-1" class="headerlink" title="RELEASE:"></a>RELEASE:</h4><blockquote>
+<p> keytool -v -list -keystore keystore.jks</p>
 </blockquote>
 <hr>
 <p><em>【一定要记得加上 -v 参数，不然只能看到SHA1，没有MD5】【keystore.jks，需要替换为你自己的密钥所在路径和文件名】</em></p>
@@ -412,8 +414,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -466,6 +477,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac"><span class="nav-number">1.</span> <span class="nav-text">Mac</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DEBUG"><span class="nav-number">1.0.1.</span> <span class="nav-text">DEBUG:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RELEASE"><span class="nav-number">1.0.2.</span> <span class="nav-text">RELEASE:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows"><span class="nav-number">2.</span> <span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DEBUG-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">DEBUG:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RELEASE-1"><span class="nav-number">2.0.2.</span> <span class="nav-text">RELEASE:</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

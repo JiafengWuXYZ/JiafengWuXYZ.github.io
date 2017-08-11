@@ -325,17 +325,19 @@
       
         
           
-            <p><strong>Mac</strong>：</p>
-<p>DEBUG:</p>
-<blockquote>
-<p>输入命令</p>
-<figure class="highlight plain"><figcaption><span>-list -v -keystore ~/.android/debug.keystore ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&gt;</div><div class="line">&gt; 注：debug.keystore只是默认调试的签名钥 </div><div class="line">&gt;</div><div class="line">&gt; 默认密码：android</div><div class="line"></div><div class="line">RELEASE:</div><div class="line"></div><div class="line">&gt; ```keytool -list -v -keystore /Users/xx.jks -alias xx -storepass abcdef -keypass abcdef</div></pre></td></tr></table></figure>
+            <h2 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h2><h4 id="DEBUG"><a href="#DEBUG" class="headerlink" title="DEBUG:"></a>DEBUG:</h4><blockquote>
+<p>keytool -list -v -keystore ~/.android/debug.keystore </p>
 </blockquote>
-<p><strong>Windows</strong>：</p>
-<p>DEBUG:</p>
-<blockquote>
-<p>输入命令</p>
-<figure class="highlight plain"><figcaption><span>-v -list -keystore  C:\Users\DELL\.android\debug.keystore```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">RELEASE:</div><div class="line"></div><div class="line">&gt; ```keytool -v -list -keystore keystore.jks</div></pre></td></tr></table></figure>
+<p>注：debug.keystore只是默认调试的签名钥 </p>
+<p>默认密码：android</p>
+<h4 id="RELEASE"><a href="#RELEASE" class="headerlink" title="RELEASE:"></a>RELEASE:</h4><blockquote>
+<p> keytool -list -v -keystore /Users/xx.jks -alias xx -storepass abcdef -keypass abcdef</p>
+</blockquote>
+<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h4 id="DEBUG-1"><a href="#DEBUG-1" class="headerlink" title="DEBUG:"></a>DEBUG:</h4><blockquote>
+<p> keytool -v -list -keystore  C:\Users\DELL.android\debug.keystore</p>
+</blockquote>
+<h4 id="RELEASE-1"><a href="#RELEASE-1" class="headerlink" title="RELEASE:"></a>RELEASE:</h4><blockquote>
+<p> keytool -v -list -keystore keystore.jks</p>
 </blockquote>
 <hr>
 <p><em>【一定要记得加上 -v 参数，不然只能看到SHA1，没有MD5】【keystore.jks，需要替换为你自己的密钥所在路径和文件名】</em></p>
