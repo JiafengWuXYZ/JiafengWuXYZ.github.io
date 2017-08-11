@@ -254,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.baidu.com/2017/08/11/Start/">
+    <link itemprop="mainEntityOfPage" href="http://www.baidu.com/2017/08/11/Android-Studio-Get-SHA1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wujiafeng">
@@ -273,7 +273,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/11/Start/" itemprop="url">Start</a></h1>
+                <a class="post-title-link" href="/2017/08/11/Android-Studio-Get-SHA1/" itemprop="url">Android Studio 获取 SHA1</a></h1>
         
 
         <div class="post-meta">
@@ -285,7 +285,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-11T12:00:20+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-11T17:17:47+08:00">
                 2017-08-11
               </time>
             
@@ -325,11 +325,20 @@
       
         
           
-            <p>#####这是第一篇博客</p>
+            <p><strong>Mac</strong>：</p>
+<p>DEBUG:</p>
 <blockquote>
-<p>这个可以检测网络的情况</p>
+<p>输入命令</p>
+<figure class="highlight plain"><figcaption><span>-list -v -keystore ~/.android/debug.keystore ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&gt;</div><div class="line">&gt; 注：debug.keystore只是默认调试的签名钥 </div><div class="line">&gt;</div><div class="line">&gt; 默认密码：android</div><div class="line"></div><div class="line">RELEASE:</div><div class="line"></div><div class="line">&gt; ```keytool -list -v -keystore /Users/xx.jks -alias xx -storepass abcdef -keypass abcdef</div></pre></td></tr></table></figure>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NetWorkUtil</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">NetWorkUtil</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line"><span class="comment">     * 判断网络是否可用</span></div><div class="line"><span class="comment">     *</span></div><div class="line"><span class="comment">     * <span class="doctag">@param</span> context</span></div><div class="line"><span class="comment">     * <span class="doctag">@return</span></span></div><div class="line"><span class="comment">     */</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isNetWorkAvailable</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);</div><div class="line">        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();</div><div class="line">        <span class="keyword">return</span> networkInfo != <span class="keyword">null</span> &amp;&amp; networkInfo.isConnected();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line"><span class="comment">     * 检测wifi是否连接</span></div><div class="line"><span class="comment">     *</span></div><div class="line"><span class="comment">     * <span class="doctag">@return</span></span></div><div class="line"><span class="comment">     */</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isWifiConnected</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);</div><div class="line">        NetworkInfo networkInfo = cm.getActiveNetworkInfo();</div><div class="line">        <span class="keyword">return</span> networkInfo != <span class="keyword">null</span> &amp;&amp; networkInfo.getType() == ConnectivityManager.TYPE_WIFI;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line"><span class="comment">     * 检测3G是否连接</span></div><div class="line"><span class="comment">     *</span></div><div class="line"><span class="comment">     * <span class="doctag">@return</span></span></div><div class="line"><span class="comment">     */</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">is3gConnected</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);</div><div class="line">        NetworkInfo networkInfo = cm.getActiveNetworkInfo();</div><div class="line">        <span class="keyword">return</span> networkInfo != <span class="keyword">null</span> &amp;&amp; networkInfo.getType() == ConnectivityManager.TYPE_MOBILE;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p><strong>Windows</strong>：</p>
+<p>DEBUG:</p>
+<blockquote>
+<p>输入命令</p>
+<figure class="highlight plain"><figcaption><span>-v -list -keystore  C:\Users\DELL\.android\debug.keystore```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">RELEASE:</div><div class="line"></div><div class="line">&gt; ```keytool -v -list -keystore keystore.jks</div></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<p><em>【一定要记得加上 -v 参数，不然只能看到SHA1，没有MD5】【keystore.jks，需要替换为你自己的密钥所在路径和文件名】</em></p>
 
           
         
